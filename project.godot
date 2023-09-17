@@ -12,8 +12,12 @@ config_version=5
 
 config/name="Godot WebXR Template"
 run/main_scene="res://Main.tscn"
-config/features=PackedStringArray("4.0", "GL Compatibility")
+config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[audio]
+
+driver/mix_rate.web=44100
 
 [rendering]
 

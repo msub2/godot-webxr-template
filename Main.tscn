@@ -1,6 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://rotrdr71jpd5"]
+[gd_scene load_steps=6 format=3 uid="uid://rotrdr71jpd5"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_b57fe"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0cg2x"]
+
+[sub_resource type="Sky" id="Sky_ajyn8"]
+sky_material = SubResource("ProceduralSkyMaterial_0cg2x")
+
+[sub_resource type="Environment" id="Environment_r3nvd"]
+background_mode = 2
+sky = SubResource("Sky_ajyn8")
 
 [sub_resource type="BoxMesh" id="BoxMesh_4tk31"]
 size = Vector3(0.1, 0.1, 0.1)
@@ -11,6 +20,7 @@ script = ExtResource("1_b57fe")
 [node name="XROrigin3D" type="XROrigin3D" parent="."]
 
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+environment = SubResource("Environment_r3nvd")
 
 [node name="LeftController" type="XRController3D" parent="XROrigin3D"]
 tracker = &"left_hand"
